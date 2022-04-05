@@ -1,13 +1,15 @@
 <template>
-  <div>
-    <search v-on:search-text="SearchText" />
-    <joke
-      v-for="joke in jokes"
-      :key="joke.id"
-      :id="joke.id"
-      :joke="joke.joke"
-    />
-  </div>
+  <XyzTransitionGroup class="item-group" xyz="fade-50% right-3 up-3">
+    <div>
+      <search v-on:search-text="SearchText" />
+      <joke
+        v-for="joke in jokes"
+        :key="joke.id"
+        :id="joke.id"
+        :joke="joke.joke"
+      />
+    </div>
+  </XyzTransitionGroup>
 </template>
 
 <script>
